@@ -6,13 +6,13 @@ selectElem.addEventListener('change', changeTheme);
 function changeTheme() {
     let current = selectElem.value;
     if (current === 'ocean') {
-        document.body.style.backgroundImage = 'ocean.jpg';;
+        document.body.style.backgroundImage = "url('ocean.jpg')";
         pageContent.style.fontFamily = "Papyrus, fantasy";
     } else if (current === 'forest') {
-        document.body.style.backgroundImage = 'forest.jpg';
+        document.body.style.backgroundImage = "url('forest.jpg')";
         pageContent.style.fontFamily = "Impact, sans-serif";
     } else if (current === 'desert') {
-        document.body.style.backgroundImage = 'desert.jpg';
+        document.body.style.backgroundImage = "url('desert.jpg')";
         pageContent.style.fontFamily = "'Big Caslon', serif";
     } else {
         // default
