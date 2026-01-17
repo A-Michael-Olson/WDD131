@@ -59,8 +59,21 @@ li {
     margin-top: 60px;
 }
 
-    .logo img {
-        width: 200px;
-        max-width: 100%;
-        height: auto;
-    }
+.logo img {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Dark Mode*/
+.dark {
+    background-color: #000;
+    color: #fff;
+}
+.dark .page {
+    border-color: #555;
+}
+.dark h2 {
+    color: #9fc5ff;
+    border-color: #555;
+}
