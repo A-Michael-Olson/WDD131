@@ -8,11 +8,11 @@ themeSelect.addEventListener('change', function () {
 
     if (theme === 'dark') {
         body.classList.add('dark');
-        logoIMG.src = 'assets/byui-logo-white.webp';
+        logoIMG.src = 'byui-logo-white.webp';
     }
 
     if (theme === 'light') {
         body.classList.remove('dark');
-        logoIMG.src = 'assets/byui-logo.webp';
+        logoIMG.src = 'byui-logo.webp';
     }
 });
