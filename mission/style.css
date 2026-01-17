@@ -67,7 +67,7 @@ li {
 
 /* Dark Mode*/
 .dark {
-    background-color: #000;
+    background-color: #333;
     color: #fff;
 }
 .dark .page {
