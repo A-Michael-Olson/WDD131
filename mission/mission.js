@@ -8,7 +8,7 @@ themeSelect.addEventListener('change', function () {
 
     if (theme === 'dark') {
         body.classList.add('dark');
-        logoIMG.src = 'byui-logo-white.webp';
+        logoIMG.src = 'byui-logo-white.png';
     }
 
     if (theme === 'light') {
