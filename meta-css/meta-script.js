@@ -4,6 +4,7 @@ selectElem.addEventListener("change", function () {
     let codeValue = selectElem.value;
     const topics = document.getElementById("topics");
 
+
     if (codeValue === "html") {
         topics.style.color = "black";
         document.querySelector("h2").textContent = "HyperText Markup Language";
@@ -18,3 +19,4 @@ selectElem.addEventListener("change", function () {
         topics.style.color = "yellow";
         document.querySelector("h2").textContent = "JavaScript";
     }
+});
