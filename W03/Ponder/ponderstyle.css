@@ -48,33 +48,35 @@ footer {
           
 @media screen and (min-width: 700px) {
 
-  /* Layout main content horizontally */
+  /* Layout content responsively without more breakpoints */
   main {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
   }
 
   section {
-    flex: 1;
+    flex: 1 1 30%;
     margin: 0;
   }
 
-  /* Show navigation normally */
+  /* Show full navigation */
   nav {
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
+    gap: 1rem;
   }
 
   nav a {
     display: block;
   }
 
-  /* Hide hamburger menu on desktop */
+  /* Hide hamburger menu */
   .menu-btn {
     display: none;
   }
 
-  /* Header layout cleanup */
+  /* Header alignment */
   header {
     display: grid;
     grid-template-columns: 1fr auto;
@@ -82,6 +84,6 @@ footer {
   }
 
   h1 {
-    grid-column: 1 / -1;
+    text-align: left;
   }
 }
