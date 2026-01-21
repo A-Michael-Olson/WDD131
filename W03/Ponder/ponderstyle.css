@@ -46,3 +46,42 @@ footer {
     text-align: center;
 }
           
+@media screen and (min-width: 700px) {
+
+  /* Layout main content horizontally */
+  main {
+    display: flex;
+    gap: 1rem;
+  }
+
+  section {
+    flex: 1;
+    margin: 0;
+  }
+
+  /* Show navigation normally */
+  nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  nav a {
+    display: block;
+  }
+
+  /* Hide hamburger menu on desktop */
+  .menu-btn {
+    display: none;
+  }
+
+  /* Header layout cleanup */
+  header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  h1 {
+    grid-column: 1 / -1;
+  }
+}
