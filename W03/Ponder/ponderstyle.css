@@ -23,6 +23,28 @@ section {
   margin: 1em;
   border: 1px solid #ccc;
 }
+.menu {
+    text-align: center
+}
+.menu a {
+    padding: 20px;
+    color: black;
+    display: block;
+    text-decoration: none;
+    border-top: 1px solid gray;
+}
+.menu a:hover {
+    color: #616061;
+}
+.menu-btn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+.hide {
+        display: none;
+}
+
 nav a {
     padding: 20px;
     color: black;
@@ -64,8 +86,9 @@ footer {
     .menu-btn {
         display: none;
     }
-    nav a {
+    menu a {
         display: inline;
+        border: none;
     }
     nav {
         text-align: right;
