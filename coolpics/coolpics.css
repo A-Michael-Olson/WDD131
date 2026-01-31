@@ -1,3 +1,7 @@
+/*
+
+*/
+
 /* RESET-ish */
 * {
     box-sizing: border-box;
@@ -51,6 +55,37 @@ h2 {
         border: 4px solid white;
     }
 
+figure img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    padding: 5px;
+    background-color: white;
+    box-shadow: 5px 5px 15px black;
+    display: block;
+    margin: 0 auto;
+}
+
+dialog img {
+    width: 90%;
+    display: block;
+    margin: 20vh auto;
+}
+
+dialog {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.75);
+}
+
+.close-viewer {
+    position: absolute;
+    top: 10vh;
+    right: 2vh;
+    padding: 3px 6px;
+    font-size: 1.5em;
+}
+
 /* FOOTER */
 footer {
     background: #3b7ddd;
@@ -59,23 +94,28 @@ footer {
     margin-top: 1rem;
 }
 
-/* Mobile */
-@media (max-width: 599px) {
-    .gallery {
-        grid-template-columns: 300px;
-    }
-}
 
 /* Tablet */
-@media (min-width: 600px) and (max-width: 899px) {
+@media screen and (min-width: 700px) {
     .gallery {
-        grid-template-columns: repeat(2, 300px);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 /* Desktop */
-@media (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     .gallery {
         grid-template-columns: repeat(3, 300px);
+    }
+
+    dialog img {
+        width: 60%;
+        margin: 15vh auto;
+    }
+
+    .close-viewer {
+        position: absolute;
+        right: 15vh;
     }
 }

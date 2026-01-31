@@ -1,3 +1,4 @@
+//coolpics.js
 
 const gallery = document.querySelector('.gallery');
 const modal = document.querySelector('dialog');
@@ -11,7 +12,7 @@ function openModal(e) {
     const image = e.target;
     const src = image.getAttribute('src');
     const alt = image.getAttribute('alt');
-    const largesrc = src.replace('-sm', '-full');
+    const largesrc = src.replace('-sml', '-full');
     modalImage.setAttribute('src', largesrc);
     modalImage.setAttribute('alt', alt);
     modal.showModal();
