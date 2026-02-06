@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header / Footer */
+header, footer {
+    padding: 1rem;
+    text-align: center;
+}
+
+footer {
+    border-top: 2px solid orange;
+}
+
+/* Navigation */
+.main-nav {
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid orange;
+    border-bottom: 2px solid orange;
+}
+
+    .main-nav li {
+        padding: 8px;
+    }
+
+    .main-nav a {
+        color: darkred;
+        text-decoration: none;
+    }
+
+/* Book container */
+#book-review {
+    padding: 0 2rem;
+}
+
+.book {
+    max-width: 700px;
+    margin: 20px auto;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+/* =========================
+   MOBILE FIRST
+   ========================= */
+/* Mobile first */
+.book {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.details {
+    text-align: right;
+    font-size: 0.9rem;
+}
+
+.book-content {
+    text-align: left;
+}
+
+    .book-content img {
+        max-width: 200px;
+        display: block;
+        margin: 0.5rem 0;
+    }
+
+/* Wide screens */
+@media (min-width: 600px) {
+
+    /* NAV */
+    .main-nav {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1.5rem;
+        padding-right: 1rem;
+    }
+
+        .main-nav li {
+            padding: 0;
+        }
+
+    /* BOOK LAYOUT */
+    .book {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .details {
+        width: 180px;
+        text-align: right;
+        padding-right: 1.5rem;
+    }
+
+    .book-content {
+        max-width: 600px;
+        border-left: 1px solid #f4a261;
+        padding-left: 2rem; 
+    }
+
+        .book-content img {
+            margin-left: 3rem;
+        }
+}
+}
