@@ -79,3 +79,6 @@ console.log(filterFruits);
 words.forEach((fruit) => {
     console.log(`The index of ${fruit} is ${words.indexOf(fruit)}`)
 });
+
+words[2] = 'strawberry';
+console.log(words);
