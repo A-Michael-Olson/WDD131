@@ -1,0 +1,175 @@
+/* General Reset & Layout */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.checkout-wrapper {
+    width: 600px; 
+}
+
+/* 1. MAIN FORM GRID 
+   As per your "Form Grid" image:
+   - Rows: Card stack (auto), then Submit button (auto)
+   - Columns: Main content area, then Submit button alignment 
+*/
+#paymentForm {
+    display: grid;
+    grid-template-columns: 1fr 140px; 
+    grid-template-rows: auto auto;
+    gap: 10px;
+    align-items: end;
+}
+
+/* 2. CARD STACK (The container for both cards) */
+.card-stack {
+    grid-column: 1 / 3; 
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    position: relative;
+    height: 350px; 
+}
+
+/* Shared Card Styles */
+.card {
+    background: #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    line-height: 1;
+    display: inline-block;
+    filter: drop-shadow(0 2px 2px rgba(0,0,0,0.1));
+}
+
+/* 3. FRONT CARD GRID 
+   Positioned top-left in the stack
+*/
+.card-front {
+    grid-area: 1 / 1 / 8 / 9; 
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    padding-bottom: 250px;
+}
+
+.card-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-front .form-group:nth-child(2) {
+    grid-column: 1 / -1;
+}
+/* Card Number spans full width */
+
+.card-row {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    gap: 20px;
+}
+
+/* 4. BACK CARD GRID 
+   Positioned bottom-right in the stack
+*/
+.card-back {
+    grid-area: 3 / 3 / 10 / 11;
+    background: #bbb;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.cvc-group {
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+}
+
+.cvc-group label {
+    margin-bottom: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+    .cvc-group input {
+        /* Ensures the input stays within that 100px width */
+        width: 100%;
+    }
+
+    /* Decorative Magnetic Strip */
+    .card-back::before {
+        content: "";
+        background: #000;
+        height: 50px;
+        width: 100%;
+        position: absolute;
+        top: 25px;
+        left: 0;
+    }
+
+.checkout-wrapper {
+    width: 600px;
+    padding-bottom: 50px; 
+}
+
+/* Form Styling */
+label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.expiration-inputs {
+    display: flex;
+    gap: 5px;
+}
+
+/* 5. SUBMIT BUTTON 
+   Placed on the far right of the second row
+*/
+.submit-btn {
+    grid-column: 2; 
+    padding: 12px 25px;
+    background: #eee;
+    border: 2px solid #333;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 2px 2px 0px #000;
+}
+
+    .submit-btn:active {
+        transform: translateY(2px);
+        box-shadow: 0px 0px 0px #000;
+    }

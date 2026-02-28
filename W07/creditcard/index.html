@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Credit Card Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="card.css" />
+    <script src="card.js" defer></script>
+</head>
+<body>
+
+    <main class="checkout-wrapper">
+
+        <form id="paymentForm" novalidate>
+
+            <!-- Card Stack Container -->
+            <div class="card-stack">
+
+                <!-- FRONT CARD (Main Box) -->
+                <div class="card card-front">
+
+                    <div class="card-header">
+                        <p class="total">TOTAL: $199</p>
+                        <span class="card-icon" aria-hidden="true">💳</span>
+                    </div>
+
+                    <!-- Card Number -->
+                    <div class="form-group">
+                        <label for="cardNumber">CARD NUMBER</label>
+                        <input type="text"
+                               id="cardNumber"
+                               name="cardNumber"
+                               maxlength="16"
+                               inputmode="numeric"
+                               placeholder="1234 5678 9101 1020"
+                               required>
+                    </div>
+
+                    <!-- Bottom Row -->
+                    <div class="card-row">
+
+                        <!-- Card Holder -->
+                        <div class="form-group">
+                            <label for="cardHolder">CARD HOLDER</label>
+                            <input type="text"
+                                   id="cardHolder"
+                                   name="cardHolder"
+                                   placeholder="John Doe"
+                                   required>
+                        </div>
+
+                        <!-- Expiration -->
+                        <div id="cardExpiration">
+                            <label for="expirationDate" id="expirationDate">
+                                EXPIRATION
+                            </label>
+
+                            <div class="expiration-inputs">
+                                <input type="text"
+                                       id="month"
+                                       name="expMonth"
+                                       placeholder="MM"
+                                       maxlength="2"
+                                       inputmode="numeric"
+                                       aria-labelledby="expirationDate"
+                                       required>
+
+                                <input type="text"
+                                       id="year"
+                                       name="expYear"
+                                       placeholder="YY"
+                                       maxlength="2"
+                                       inputmode="numeric"
+                                       aria-labelledby="expirationDate"
+                                       required>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <!-- BACK CARD (Overlapping Smaller Box) -->
+                <div class="card card-back">
+
+                    <div class="cvc-group">
+                        <label for="cvc">CVC/CVV</label>
+                        <input type="text"
+                               id="cvc"
+                               name="cvc"
+                               maxlength="4"
+                               inputmode="numeric"
+                               placeholder="XXX"
+                               required>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Feedback -->
+            <div id="formFeedback" aria-live="polite"></div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">
+                Submit
+            </button>
+
+        </form>
+
+    </main>
+
+
+</body>
+</html>
