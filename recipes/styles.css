@@ -1,0 +1,187 @@
+/* ===== Global Reset ===== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f6f6f6;
+    padding: 1rem;
+}
+
+
+
+/* ===== Headings Font ===== */
+
+h1, h2 {
+    font-family: 'Amatic SC', cursive;
+}
+
+
+
+/* ===== Logo Area ===== */
+
+.logo-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+    .logo-area img {
+        width: 60px;
+    }
+
+    .logo-area h1 {
+        font-size: 3rem;
+    }
+
+
+
+/* ===== Search Bar ===== */
+
+.search-area {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+    .search-area input {
+        flex: 1;
+        padding: 0.6rem;
+        border: 1px solid #ccc;
+        border-right: none;
+        border-radius: 6px 0 0 6px;
+    }
+
+    .search-area button {
+        border: 1px solid #ccc;
+        border-left: none;
+        padding: 0.5rem;
+        background: white;
+        border-radius: 0 6px 6px 0;
+        cursor: pointer;
+    }
+
+    .search-area img {
+        width: 20px;
+    }
+
+
+
+/* ===== Recipe Card ===== */
+
+.recipe-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.recipe-image {
+    width: 100%;
+    border-radius: 6px;
+}
+
+
+
+/* ===== Recipe Text ===== */
+
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.tag {
+    background: #eee;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+.recipe-info h2 {
+    color: #0077cc;
+    font-size: 1.8rem;
+}
+
+
+
+/* ===== Rating ===== */
+
+.rating {
+    color: gold;
+    font-size: 1.2rem;
+}
+
+
+
+/* ===== Description ===== */
+/* Hidden on mobile */
+
+.description {
+    display: none;
+    font-size: 0.9rem;
+}
+
+
+
+/* ===== Footer ===== */
+
+footer {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+    footer a {
+        font-size: 0.8rem;
+    }
+
+
+
+/* ===== Social Icons ===== */
+
+.social {
+    display: flex;
+    gap: 12px;
+}
+
+    .social img {
+        width: 28px;
+    }
+
+
+
+/* ===== Responsive Layout ===== */
+
+@media (min-width: 700px) {
+
+    .recipe-card {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    .recipe-image {
+        width: 300px;
+    }
+
+    .description {
+        display: block;
+    }
+
+    footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
