@@ -109,6 +109,8 @@ let hikeContainer = document.querySelector('#hike-container');
 
 let button = document.querySelector('button');
 
+let input = document.querySelector('#search');
+
 button.addEventListener('click', search);
 
 /* for the enter key to work on search - not just clicking the search button */
