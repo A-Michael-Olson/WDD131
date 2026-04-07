@@ -1,0 +1,42 @@
+{
+    "projects": [
+        {
+            "id": "chess-program",
+            "title": "Chess Program",
+            "images": [
+                {
+                    "src": "images/chessScreenshot.png",
+                    "caption": "Compiled Program View"
+                },
+                {
+                    "src": "images/chessBoardTest.png",
+                    "caption": "Board Test Results"
+                },
+                {
+                    "src": "images/chessTest.png",
+                    "caption": "Move Test Coverage"
+                }
+            ],
+            "features": [
+                "Turn-based move validation with rule enforcement",
+                "Dynamic generation of legal moves for each piece",
+                "Support for special chess moves (castling, en passant, pawn promotion)",
+                "Modular class structure with reusable components",
+                "Fully tested with unit tests for each core class"
+            ],
+            "takeaways": [
+                "How to apply inheritance and polymorphism effectively to reduce duplicate logic",
+                "The value of test-driven development in keeping a large codebase stable",
+                "Improved collaboration and version control through partner programming",
+                "Importance of clean code organization for debugging and future scalability"
+            ],
+            "description": [
+                "This C++ project, developed collaboratively with a partner, is a complete recreation of the game of Chess. The program is built using a modular object-oriented design, featuring a Board class, a general Piece class, and specialized subclasses for each unique chess piece.",
+                "A dedicated Move class handles the logic for generating and parsing moves, including converting between internal representations and human-readable formats (e.g., from coordinates and piece data to algebraic notation like e4, and vice versa).",
+                "The Position class supports multiple ways of representing a piece's location, such as (row, column), a single index (0–63), algebraic notation (A4, E7), and even screen pixel coordinates — making it highly flexible and adaptable to future GUI integration.",
+                "All components were developed using test-driven development. Every method and class was explicitly tested to ensure correctness. The game fully supports standard chess rules along with special mechanics such as en passant, castling, and pawn promotion, with logic to verify prerequisites before enabling these moves."
+            ],
+            "details": "This project was completed in Spring 2025 as part of an advanced C++ course using TDD methodology."
+        }
+    ]
+}
