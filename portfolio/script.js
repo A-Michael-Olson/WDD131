@@ -1,4 +1,5 @@
 let projects = [];
+let currentIndex = 0;
 
 async function init() {
     const res = await fetch('projects.json');
@@ -6,8 +7,28 @@ async function init() {
     projects = data.projects;
 
     const params = new URLSearchParams(window.location.search);
-    const id = params.get('id') || projects[0].id;
-    renderProject(id);
+    const id = params.get('id');
+
+    currentIndex = projects.findIndex(p => p.id === id);
+    if (currentIndex === -1) currentIndex = 0;
+
+    renderProject(projects[currentIndex].id);
+    setupProjectNav();
+}
+
+function setupProjectNav() {
+    const prevBtn = document.getElementById('project-prev');
+    const nextBtn = document.getElementById('project-next');
+
+    prevBtn.onclick = () => {
+        currentIndex = (currentIndex - 1 + projects.length) % projects.length;
+        renderProject(projects[currentIndex].id);
+    };
+
+    nextBtn.onclick = () => {
+        currentIndex = (currentIndex + 1) % projects.length;
+        renderProject(projects[currentIndex].id);
+    };
 }
 
 function renderProject(id) {

@@ -33,10 +33,48 @@
             "description": [
                 "This C++ project, developed collaboratively with a partner, is a complete recreation of the game of Chess. The program is built using a modular object-oriented design, featuring a Board class, a general Piece class, and specialized subclasses for each unique chess piece.",
                 "A dedicated Move class handles the logic for generating and parsing moves, including converting between internal representations and human-readable formats (e.g., from coordinates and piece data to algebraic notation like e4, and vice versa).",
-                "The Position class supports multiple ways of representing a piece's location, such as (row, column), a single index (0–63), algebraic notation (A4, E7), and even screen pixel coordinates — making it highly flexible and adaptable to future GUI integration.",
+                "The Position class supports multiple ways of representing a piece's location, such as (row, column), a single index (0-63), algebraic notation (A4, E7), and even screen pixel coordinates - making it highly flexible and adaptable to future GUI integration.",
                 "All components were developed using test-driven development. Every method and class was explicitly tested to ensure correctness. The game fully supports standard chess rules along with special mechanics such as en passant, castling, and pawn promotion, with logic to verify prerequisites before enabling these moves."
             ],
             "details": "This project was completed in Spring 2025 as part of an advanced C++ course using TDD methodology."
+        },
+        {
+            "id": "howitzer-simulator",
+            "title": "Howitzer Simulator",
+            "images": [
+                {
+                    "src": "images/howitzerScreenshot.png",
+                    "caption": "Projectile Trajectory Visualization"
+                },
+                {
+                    "src": "images/howitzerPhysics.png",
+                    "caption": "Physics Unit Tests"
+                },
+                {
+                    "src": "images/howitzerProjectile.png",
+                    "caption": "Projectile Unit Tests"
+                }
+            ],
+            "features": [
+                "Accurate gravity model that adjusts based on altitude",
+                "Real-time calculation of projectile trajectory and impact",
+                "Encapsulated classes for Howitzer, Projectile, and Physics",
+                "Modular, abstract architecture for extensibility and clarity",
+                "Test-driven development ensures reliable behavior throughout"
+            ],
+            "takeaways": [
+                "The importance of abstraction for creating testable, modular systems",
+                "Collaborative development through pair programming and Git version control",
+                "Refining physics for realism and computational efficiency",
+                "Balancing fidelity with simplicity to ensure maintainability"
+            ],
+            "description": [
+                "This C++ simulation models the trajectory of a projectile launched from a howitzer. Built as a collaborative partner project, it leverages real-world physics and object-oriented design to calculate and visualize artillery motion with high fidelity.",
+                "The Physics class dynamically adjusts gravitational acceleration based on the projectile’s altitude, simulating how gravity weakens at higher elevations. The Projectile class handles the core motion calculations, applying velocity updates over time. The Howitzer class encapsulates initial launch logic such as angle, velocity, and position.",
+                "The simulation is designed to be abstract, robust, and maintainable. Special attention was paid to keeping modules isolated, testable, and logically cohesive. We used test-driven development (TDD) throughout the project to validate components, improve stability, and ensure future-proof extensibility.",
+                "The program was developed in C++ using modern programming principles. Its modular design supports future upgrades such as air resistance, terrain interaction, or visual GUIs."
+            ],
+            "details": "This project was completed in Fall 2025 in an advanced C++ course using TDD methodology and collaboration."
         }
     ]
 }
