@@ -1,5 +1,7 @@
+// Variables
 let projects = [];
 let currentIndex = 0;
+let slideIndex = 0;
 
 async function init() {
     const res = await fetch('projects.json');
@@ -41,6 +43,7 @@ function renderProject(id) {
 
     renderTitle(project.title);
     renderImages(project.images);
+    setupSlider(project.images);
     renderList('features-list', project.features);
     renderList('takeaways-list', project.takeaways);
     renderDescription(project.description, project.details);
@@ -92,6 +95,33 @@ function renderDescription(descArray, details) {
     const detail = document.createElement('p');
     detail.innerHTML = `<em>${details}</em>`;
     container.appendChild(detail);
+}
+
+function setupSlider(images) {
+    const track = document.querySelector('.slider-track');
+    const prev = document.getElementById('prevBtn');
+    const next = document.getElementById('nextBtn');
+
+    slideIndex = 0;
+
+    function updateSlider() {
+        const width = track.clientWidth;
+        track.style.transform = `translateX(-${slideIndex * width}px)`;
+    }
+
+    prev.onclick = () => {
+        if (slideIndex > 0) {
+            slideIndex--;
+            updateSlider();
+        }
+    };
+
+    next.onclick = () => {
+        if (slideIndex < images.length - 1) {
+            slideIndex++;
+            updateSlider();
+        }
+    };
 }
 
 

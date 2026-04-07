@@ -38,6 +38,17 @@ nav {
     background: var(--secondary-color);
 }
 
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        list-style: none;
+    }
+
     nav a,
     nav button {
         padding: 1em;
@@ -104,6 +115,15 @@ h2 {
 
 ul {
     padding-left: 1.2em;
+}
+
+.about-photo {
+    float: left;
+    max-width: 200px;
+    margin: 0 1.5em 1em 0;
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.2);
+    object-fit: cover;
 }
 
 /* ================================
@@ -186,6 +206,7 @@ ul {
     nav {
         flex-direction: row;
         justify-content: center;
+        gap: 20px;
     }
 
     section {
