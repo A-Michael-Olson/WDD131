@@ -105,6 +105,7 @@ nav {
 ================================ */
 section {
     padding: 1.5em 1em;
+    clear: both;
 }
 
 h2 {
